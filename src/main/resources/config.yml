@@ -1,27 +1,42 @@
 # Author: Coooding | DC: thepistoncraft#9392
 # Edit the Settings for setCoins by firstJoin
 Settings:
-  setJoinCoins: true
-  firstJoinCoins: 1000
+  setJoinCoins: false
+  firstJoinCoins: 0
 # Edit the Plugin Messages
 Messages:
   prefix: '&8| &6Coins &8× &7'
-  noPermission: '&cDu hast dazu keine Rechte.'
-  haveCoins: 'Du hast &e%coins% Coins'
-  targetCoins: 'Der Spieler &e%targetPlayer% &7hat &e%coins% Coins'
-  targetIsNull: 'Der Spieler existiert nicht.'
-  playerIsNotInDatabase: 'Der Spieler ist nicht in der Coins Datenbank registriert'
-  commandSyntaxHelp: 'Bitte benutze&8: &e%commandSyntax%'
-  setCoinsByJoin: 'Dir wurden zum Start &e%amount% &7gutgeschrieben'
-  addPlayerCoins: 'Du hast dem Spieler &e%targetPlayer% &7insgesamt &e%amount% &7hinzugefügt'
-  setPlayerCoins: 'Du hast dem Spieler &e%targetPlayer% &7insgesamt &e%amount% &7gesetzt'
-  removePlayerCoins: 'Du hast dem Spieler &e%targetPlayer% &7insgesamt &e%amount% &7entfernt'
-  payPlayerCoinsTargetMessage: 'Der Spieler &e%targetPlayer% &7hat dir &e%amount% Coins &7gezahlt!'
-  payPlayerCoinsPlayerMessage: 'Du hast den Spieler &e%targetPlayer%&7, &e%amount% Coins &7gezahlt!'
+  noPermission: '&cYou do not have permission for this.'
+  haveCoins: 'You have &e%coins% Coins'
+  targetCoins: 'Player &e%targetPlayer% &7has &e%coins% Coins'
+  targetIsNull: 'The player does not exist.'
+  playerIsNotInDatabase: 'The player is not registered in the Coins database'
+  commandSyntaxHelp: 'Please use&8: &e%commandSyntax%'
+  setCoinsByJoin: 'You have been credited with &e%amount% Coins at the start'
+  addPlayerCoins: 'You have added a total of &e%amount% Coins to player &e%targetPlayer%'
+  setPlayerCoins: 'You have set a total of &e%amount% Coins for player &e%targetPlayer%'
+  removePlayerCoins: 'You have removed a total of &e%amount% Coins from player &e%targetPlayer%'
+  payPlayerCoinsTargetMessage: 'Player &e%targetPlayer% has paid you &e%amount% Coins!'
+  payPlayerCoinsPlayerMessage: 'You have paid player &e%targetPlayer%, &e%amount% Coins!'
+  ErmetopHeader: '&eTop 10 Players by Coins'  # Example: Yellow color
+  ErmetopPlayerFormat: '&a%position%. &e%player% - &eCoins: &f%coins%'  # Example: Green and Yellow colors
+  ReloadCommandMessage: '&aPlugin configuration reloaded.'  # Add this line for the reload command message
+  ErmeHelpMessage:
+    - "&aAvailable Commands:"
+    - "&a/erme - View your coins"
+    - "&a/seterme <player> <amount> - Set player's coins"
+    - "&a/adderme <player> <amount> - Add coins to player"
+    - "&a/removeerme <player> <amount> - Remove coins from player"
+    - "&a/payerme <player> <amount> - Pay coins to another player"
+    - "&a/ermetop - View the top 10 players by coins"
+    - "&a/ermereload - Reload plugin configuration"
+    - "&a/ermehelp - Show this help message"
+
+
 # Please insert your MySQL data here!
 MySQL:
   host: 'localhost'
   username: 'root'
   port: '3306'
   database: 'coins'
-  password: 'yourPassword'
+  password: 'password'

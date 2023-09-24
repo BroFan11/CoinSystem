@@ -1,6 +1,6 @@
 name: Erme
 version: 0.1
-main: me.brofan11.erme.CoinsAPI
+main: me.brofan11.erme.ErmeAPI
 author: BroFan11
 commands:
   adderme:
@@ -18,3 +18,11 @@ commands:
   payerme:
     command: /<command>
     aliases: [payérme, utal, utalás]
+  ermetop:
+    command: /<command>
+    aliases: [toplista, érmetop, topérme]
+  ermereload:
+    command: /<command>
+  ermehelp:
+    command: /<command>
+

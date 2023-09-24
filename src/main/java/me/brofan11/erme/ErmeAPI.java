@@ -6,6 +6,8 @@ import me.brofan11.erme.utils.YamlConfigurationLoader;
 import lombok.Getter;
 import me.brofan11.erme.commands.*;
 import org.bukkit.Bukkit;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.defaults.HelpCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -40,6 +42,9 @@ public class ErmeAPI
         getCommand("adderme").setExecutor(new AddCoinsCommand());
         getCommand("removeerme").setExecutor(new RemoveCoinsCommand());
         getCommand("payerme").setExecutor(new PayCommand());
+        getCommand("ermetop").setExecutor(new TopCoinsCommand());
+        getCommand("ermereload").setExecutor(new ReloadCommand());
+        getCommand("ermehelp").setExecutor(new ErmeHelpCommand());
         Bukkit.getPluginManager().registerEvents(new ConnectionListener(), this);
     }
 
